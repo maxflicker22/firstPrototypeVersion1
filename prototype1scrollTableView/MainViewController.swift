@@ -25,15 +25,15 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-//        if segue.identifier == "DetailSegue"{
-//            if let detailViewControler = segue.destination as? DetailViewController, let organisation = organisationForSegue {
-//                detailViewControler.name = organisation.name
-//
-//
-//            }
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "DetailSegue"{
+            if let detailViewControler = segue.destination as? DetailViewController, let organisation = organisationForSegue {
+                //detailViewControler.name = organisation.name
+
+
+            }
+        }
+    }
     
 
 }
