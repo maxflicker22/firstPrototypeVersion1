@@ -29,7 +29,11 @@ class MainViewController: UIViewController {
         if segue.identifier == "DetailSegue"{
             
             if let destinationVC = segue.destination as? DetailViewController {
-                destinationVC.organisations = organisationForSegue
+                    destinationVC.organisations = organisationForSegue
+                    
+                }
+                
+//                destinationVC.detailName.text = organisationForSegue?.name
             }
             
      
@@ -38,11 +42,11 @@ class MainViewController: UIViewController {
 
 
             }
-        }
+    
     
     
 
-}
+    }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

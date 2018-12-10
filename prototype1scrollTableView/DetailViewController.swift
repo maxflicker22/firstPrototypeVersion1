@@ -42,10 +42,24 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         detailName.text = organisations?.name
-            detailUserName.text = "asf"
-//        if let image = UIImage(name: organisations?.imageURL) {
-//            detailImageView.image = image}
+        if let org = organisations{ //sicher unwrappen
+            detailName.text = org.name
+            print(org.name)
+            
+            if let image = UIImage(named: org.imageURL) {
+                            detailImageView.image = image}
+            detailtotalReach.text = "/ \(String(org.totalReach))"
+            detailActuallyReach.text = String(org.actuallyReach)
+//            detailUserName.text = org.userName
+//            detailGesamtZahl.text = String(org.gesamtZahl)
+//            detailDescription.text = org.description
+            //detailUserAnzahl.text = String(org.userAnzahl)
+            
+            
+            
+        }
+//            detailUserName.text = "asf"
+//
      
         
     }

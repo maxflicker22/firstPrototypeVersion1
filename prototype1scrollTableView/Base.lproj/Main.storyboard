@@ -128,7 +128,6 @@
                                                             </constraints>
                                                             <connections>
                                                                 <action selector="Button:" destination="4Wo-35-q4l" eventType="touchUpInside" id="f1w-4d-lfq"/>
-                                                                <segue destination="B95-Pz-Wa0" kind="show" identifier="DetailSegue" id="JPU-7d-O1Q"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -185,6 +184,7 @@
                     <navigationItem key="navigationItem" id="fLt-RS-hKp"/>
                     <connections>
                         <outlet property="tableView" destination="3vk-h8-tUG" id="mLU-tN-PVD"/>
+                        <segue destination="B95-Pz-Wa0" kind="show" identifier="DetailSegue" id="KnI-p4-YRw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yrz-rE-5dF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -211,13 +211,12 @@
                                     <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cb3-Pm-MUe">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXF-q1-fba">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXF-q1-fba">
                                                 <rect key="frame" x="8" y="226" width="359" height="66"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="66" id="1DX-ql-00h"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="52"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
