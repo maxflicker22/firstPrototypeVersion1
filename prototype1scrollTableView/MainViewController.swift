@@ -27,13 +27,19 @@ class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "DetailSegue"{
-            if let detailViewControler = segue.destination as? DetailViewController, let organisation = organisationForSegue {
-                //detailViewControler.name = organisation.name
+            
+            if let destinationVC = segue.destination as? DetailViewController {
+                destinationVC.organisations = organisationForSegue
+            }
+            
+     
+            
+
 
 
             }
         }
-    }
+    
     
 
 }
@@ -45,7 +51,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? OrganisationTableViewCell{
-            cell.configure(for: Organisations.exampleOrganisations[indexPath.section], delegate: self as OrganisationsDelegate) //
+            cell.configure(for: Organisations.exampleOrganisations[indexPath.section], delegate: self as OrganisationsDelegate) //, delegate: self as OrganisationsDelegate
             return cell
         }
         
@@ -58,10 +64,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     
 }
 extension MainViewController: OrganisationsDelegate{
-    func detailButtontapped(sender: OrganisationTableViewCell) {
+    func Button(sender: OrganisationTableViewCell) {
         if let organisations = sender.organisations{
             organisationForSegue = organisations
             performSegue(withIdentifier: "DetailSegue", sender: nil)
         }
     }
 }
+
+

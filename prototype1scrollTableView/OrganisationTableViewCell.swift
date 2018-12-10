@@ -8,7 +8,7 @@
 
 import UIKit
 protocol OrganisationsDelegate{
-    func detailButtontapped(sender: OrganisationTableViewCell)
+    func Button(sender: OrganisationTableViewCell)
 }
 
 class OrganisationTableViewCell: UITableViewCell {
@@ -23,7 +23,7 @@ class OrganisationTableViewCell: UITableViewCell {
     var delegate: OrganisationsDelegate?
     var organisations: Organisations?
     
-    func configure(for organisations: Organisations, delegate: OrganisationsDelegate) { //
+    func configure(for organisations: Organisations, delegate: OrganisationsDelegate) {
         mainLabel.text = organisations.name
         totalReachLabel.text = "/ \(String(organisations.totalReach))"
         actuallyReachLabel.text = String(organisations.actuallyReach)
@@ -35,8 +35,10 @@ class OrganisationTableViewCell: UITableViewCell {
     }
     
     
-    @IBAction func ButtonHandler(_ sender: UIButton) {
-        delegate?.detailButtontapped(sender: self)
+    
+    @IBAction func Button(_ sender: UIButton) {
+        delegate?.Button(sender: self)
     }
     
+
 }
