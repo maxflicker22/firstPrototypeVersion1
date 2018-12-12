@@ -8,6 +8,10 @@
 
 import UIKit
 import Foundation
+protocol DetailOrganisationsDelegate{
+    func donateButton(sender: OrganisationTableViewCell)
+    
+}
 
 class DetailViewController: UIViewController {
     
@@ -30,29 +34,42 @@ class DetailViewController: UIViewController {
     
     
     var organisations: Organisations?
+    var delegate: DetailOrganisationsDelegate?
 
 
     
     
     
     
- 
     
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailDonateSegue" {
+             if let destinationViewC = segue.destination as? AdViewController, let org = organisations {
+                destinationViewC.org = org
+                
+
+            }
+        }
+    }
+//
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let org = organisations{ //sicher unwrappen
             detailName.text = org.name
-            print(org.name)
+           
             
             if let image = UIImage(named: org.imageURL) {
                             detailImageView.image = image}
             detailtotalReach.text = "/ \(String(org.totalReach))"
             detailActuallyReach.text = String(org.actuallyReach)
-//            detailUserName.text = org.userName
-//            detailGesamtZahl.text = String(org.gesamtZahl)
-//            detailDescription.text = org.description
+            detailDescription.text = org.description
+            detailUserAnzahl.text = String(org.userAnzahl)
+            detailGesamtZahl.text = String(org.gesamtZahl)
+            detailUserName.text = "\(org.userName):"
             //detailUserAnzahl.text = String(org.userAnzahl)
             
             
@@ -77,5 +94,12 @@ class DetailViewController: UIViewController {
 //    }
 //
 //}
-
+    
+    
+    @IBAction func donateButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "detailDonateSegue", sender: self)
+        
+        
+    }
+    
 }

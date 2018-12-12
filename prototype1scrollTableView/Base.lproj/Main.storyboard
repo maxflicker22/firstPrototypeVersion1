@@ -117,6 +117,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="449.5"/>
                                                             <state key="normal" title="Button"/>
                                                             <connections>
+                                                                <action selector="bigDonateButton:" destination="4Wo-35-q4l" eventType="touchUpInside" id="ap2-AP-WBk"/>
                                                                 <segue destination="Gu4-dt-ZSv" kind="show" identifier="AdSegue" id="fbB-Ye-AmV"/>
                                                             </connections>
                                                         </button>
@@ -189,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yrz-rE-5dF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="653"/>
+            <point key="canvasLocation" x="2700" y="-143"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="a1t-cf-8Iv">
@@ -270,6 +271,17 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZ0-p6-qH9">
+                                        <rect key="frame" x="8" y="319" width="87" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.4481443007" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Spenden"/>
+                                        <connections>
+                                            <action selector="donateButton:" destination="B95-Pz-Wa0" eventType="touchUpInside" id="i4R-aH-f4Q"/>
+                                            <action selector="donateButton:" destination="dvB-hb-H8J" eventType="touchUpInside" id="zak-l4-EoH"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="7id-Kp-chh" firstAttribute="top" secondItem="Ncf-9d-j3g" secondAttribute="bottom" constant="32" id="1t1-XM-Ube"/>
@@ -330,11 +342,13 @@
                         <outlet property="detailUserAnzahl" destination="1qn-Qn-4Ny" id="THo-v1-Ehm"/>
                         <outlet property="detailUserName" destination="Ncf-9d-j3g" id="Q4s-oL-FeT"/>
                         <outlet property="detailtotalReach" destination="upt-tZ-9yy" id="DcB-w5-Vja"/>
+                        <segue destination="Gu4-dt-ZSv" kind="show" identifier="detailDonateSegue" id="S4S-cF-hB4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wp3-h2-bUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dvB-hb-H8J" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2509.5999999999999" y="878.86056971514245"/>
+            <point key="canvasLocation" x="2700" y="761"/>
         </scene>
         <!--Ad View Controller-->
         <scene sceneID="Hsk-tq-3fY">
@@ -449,10 +463,13 @@
                         <viewLayoutGuide key="safeArea" id="QtT-cm-4DR"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="appAdLabel" destination="NkY-Sw-QhJ" id="Olf-vy-rSw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0n-uj-saD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2612" y="-26"/>
+            <point key="canvasLocation" x="3687" y="-143"/>
         </scene>
         <!--Item-->
         <scene sceneID="3Xt-yo-ph6">
@@ -477,4 +494,7 @@
     <resources>
         <image name="4ocean" width="196.875" height="225"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fbB-Ye-AmV"/>
+    </inferredMetricsTieBreakers>
 </document>

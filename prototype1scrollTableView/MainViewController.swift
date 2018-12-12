@@ -32,16 +32,29 @@ class MainViewController: UIViewController {
                     destinationVC.organisations = organisationForSegue
                     
                 }
+            
+        }
+        
+        if segue.identifier == "AdSegue"{
+            
+            if let destinationVC = segue.destination as? AdViewController {
+                destinationVC.org = organisationForSegue
                 
-//                destinationVC.detailName.text = organisationForSegue?.name
             }
             
-     
-            
+        }
+//                    if segue.identifier == "detailDonateSegue" {
+//                         if let destinationViewC = segue.destination as? DetailViewController {
+//                            destinationViewC.organisations = organisationForSegue
+//
+//
+//                        }
+//
+//            }
 
 
 
-            }
+    }
     
     
     
@@ -62,6 +75,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
         return UITableViewCell()
     }
     
+
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return Organisations.exampleOrganisations.count
     }
@@ -74,6 +89,13 @@ extension MainViewController: OrganisationsDelegate{
             performSegue(withIdentifier: "DetailSegue", sender: nil)
         }
     }
+    func bigDonateButton(sender: OrganisationTableViewCell){
+        if let organisations = sender.organisations{
+            organisationForSegue = organisations
+            performSegue(withIdentifier: "AdSegue", sender: nil)
+        }
+    }
+    
 }
 
 

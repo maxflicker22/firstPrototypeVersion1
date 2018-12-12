@@ -9,6 +9,7 @@
 import UIKit
 protocol OrganisationsDelegate{
     func Button(sender: OrganisationTableViewCell)
+    func bigDonateButton(sender: OrganisationTableViewCell)
 }
 
 class OrganisationTableViewCell: UITableViewCell {
@@ -20,13 +21,16 @@ class OrganisationTableViewCell: UITableViewCell {
     @IBOutlet weak var actuallyReachLabel: UILabel!
     @IBOutlet weak var ProgressView: UIProgressView!
     
+    
     var delegate: OrganisationsDelegate?
     var organisations: Organisations?
+//    var shortDescription: String?
     
     func configure(for organisations: Organisations, delegate: OrganisationsDelegate) {
         mainLabel.text = organisations.name
         totalReachLabel.text = "/ \(String(organisations.totalReach))"
         actuallyReachLabel.text = String(organisations.actuallyReach)
+//        shortDescription = organisations.description
         if let image = UIImage(named: organisations.imageURL) {
             organisationsImageView.image = image
         }
@@ -38,6 +42,11 @@ class OrganisationTableViewCell: UITableViewCell {
     
     @IBAction func Button(_ sender: UIButton) {
         delegate?.Button(sender: self)
+    }
+    
+    
+    @IBAction func bigDonateButton(_ sender: UIButton) {
+        delegate?.bigDonateButton(sender: self)
     }
     
 
