@@ -10,6 +10,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    @IBAction func Btn(_ sender: UIButton) {
+        
+        print("sadf")
+    }
     
     
     override func viewDidLoad() {
