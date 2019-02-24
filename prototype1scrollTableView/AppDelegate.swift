@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firestore
+import Firebase
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +18,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        FirebaseApp.configure()
+        
+        let authListener = Auth.auth().addStateDidChangeListener { (auth, user) in
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            if user != nil {
+                let controller = storyboard.instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
+                self.window?.rootViewController = controller
+                self.window?.makeKeyAndVisible()
+            } else {
+                let controller = storyboard.instantiateViewController(withIdentifier: "homeVC") as! HomeViewController
+                self.window?.rootViewController = controller
+                self.window?.makeKeyAndVisible()
+            }
+        }
+        
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-8326376367560561~6309227404")
+        
+        
+        
+        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let navigationController = storyboard.instantiateViewController(withIdentifier: "loginNVC") as! UINavigationController
+//        var rootVC: UIViewController?
+//
+//
+//        let authListener = Auth.auth().addStateDidChangeListener { auth, user in
+////            let appdelegate = UIApplication.shared.delegate as! AppDelegate
+////            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//
+//            if user != nil {
+//
+//                rootVC = storyboard.instantiateViewController(withIdentifier: "profilVC")
+//
+////                let nav = UINavigationController(rootViewController: rootVC)
+//
+////                appdelegate.window!.rootViewController = nav
+//            } else {
+//                rootVC = storyboard.instantiateViewController(withIdentifier: "homeVC")
+//
+////                let nav = UINavigationController(rootViewController: rootVC)
+////                appdelegate.window!.rootViewController = nav
+//
+//            }
+//            navigationController.pushViewController(rootVC!, animated: false)
+        
+//        }
         return true
     }
 

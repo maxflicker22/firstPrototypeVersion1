@@ -36,13 +36,6 @@ class DetailViewController: UIViewController {
     var organisations: Organisations?
     var delegate: DetailOrganisationsDelegate?
 
-
-    
-    
-    
-    
-    
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailDonateSegue" {
@@ -66,10 +59,10 @@ class DetailViewController: UIViewController {
                             detailImageView.image = image}
             detailtotalReach.text = "/ \(String(org.totalReach))"
             detailActuallyReach.text = String(org.actuallyReach)
-            detailDescription.text = org.description
-            detailUserAnzahl.text = String(org.userAnzahl)
+//            detailDescription.text = org.description
+//            detailUserAnzahl.text = String(org.userAnzahl)
             detailGesamtZahl.text = String(org.gesamtZahl)
-            detailUserName.text = "\(org.userName):"
+//            detailUserName.text = "\(org.userName):"
             //detailUserAnzahl.text = String(org.userAnzahl)
             
             

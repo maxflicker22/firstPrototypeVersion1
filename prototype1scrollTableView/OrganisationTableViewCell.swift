@@ -27,6 +27,7 @@ class OrganisationTableViewCell: UITableViewCell {
 //    var shortDescription: String?
     
     func configure(for organisations: Organisations, delegate: OrganisationsDelegate) {
+  
         mainLabel.text = organisations.name
         totalReachLabel.text = "/ \(String(organisations.totalReach))"
         actuallyReachLabel.text = String(organisations.actuallyReach)
@@ -37,7 +38,6 @@ class OrganisationTableViewCell: UITableViewCell {
         self.organisations = organisations
         self.delegate = delegate
     }
-    
     
     
     @IBAction func Button(_ sender: UIButton) {

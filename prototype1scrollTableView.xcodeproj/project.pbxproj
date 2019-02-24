@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4218CCCE22197F550094EA8C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4218CCCD22197F550094EA8C /* HomeViewController.swift */; };
+		4218CCD022197FB30094EA8C /* RegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4218CCCF22197FB30094EA8C /* RegistViewController.swift */; };
+		4218CCD222197FE70094EA8C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4218CCD122197FE70094EA8C /* LoginViewController.swift */; };
+		4218CCD522199A5C0094EA8C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4218CCD422199A5C0094EA8C /* AuthService.swift */; };
+		4218CCD72219C92B0094EA8C /* profilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4218CCD62219C92B0094EA8C /* profilViewController.swift */; };
+		422BE57F22230A1400CFE690 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 422BE57E22230A1400CFE690 /* GoogleService-Info.plist */; };
 		423BDBBD21BD304D00D9B7D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423BDBBC21BD304D00D9B7D4 /* AppDelegate.swift */; };
 		423BDBC221BD304D00D9B7D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423BDBC021BD304D00D9B7D4 /* Main.storyboard */; };
 		423BDBC421BD305000D9B7D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423BDBC321BD305000D9B7D4 /* Assets.xcassets */; };
@@ -16,9 +22,24 @@
 		423BDBD321BD3FD500D9B7D4 /* Organisations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423BDBD221BD3FD500D9B7D4 /* Organisations.swift */; };
 		423BDBD521BD527C00D9B7D4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423BDBD421BD527C00D9B7D4 /* DetailViewController.swift */; };
 		423BDBD721BD56BD00D9B7D4 /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423BDBD621BD56BD00D9B7D4 /* AdViewController.swift */; };
+		4294FA9D21F23801002738C0 /* ChecklistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294FA9C21F23801002738C0 /* ChecklistTableViewController.swift */; };
+		4294FA9F21F23B71002738C0 /* Checks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294FA9E21F23B71002738C0 /* Checks.swift */; };
+		4294FAC321F4E4C9002738C0 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294FAC221F4E4C9002738C0 /* StatisticsViewController.swift */; };
+		4294FAC521F4E9B0002738C0 /* StatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294FAC421F4E9B0002738C0 /* StatisticsTableViewCell.swift */; };
+		4294FAC721F4F775002738C0 /* OrgStatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294FAC621F4F775002738C0 /* OrgStatisticViewController.swift */; };
+		4294FACD21F66BC1002738C0 /* ClimeAidStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294FACC21F66BC1002738C0 /* ClimeAidStatsViewController.swift */; };
+		4294FACF21F66CA0002738C0 /* StatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294FACE21F66CA0002738C0 /* StatCollectionViewCell.swift */; };
+		D31FBABB95F00177AB98D81E /* Pods_prototype1scrollTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD143B517DDC12ADC1921E00 /* Pods_prototype1scrollTableView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2FCB775281BC8B3B6ED5EF04 /* Pods-prototype1scrollTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prototype1scrollTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-prototype1scrollTableView/Pods-prototype1scrollTableView.debug.xcconfig"; sourceTree = "<group>"; };
+		4218CCCD22197F550094EA8C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4218CCCF22197FB30094EA8C /* RegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistViewController.swift; sourceTree = "<group>"; };
+		4218CCD122197FE70094EA8C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4218CCD422199A5C0094EA8C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		4218CCD62219C92B0094EA8C /* profilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profilViewController.swift; sourceTree = "<group>"; };
+		422BE57E22230A1400CFE690 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		423BDBB921BD304D00D9B7D4 /* prototype1scrollTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prototype1scrollTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		423BDBBC21BD304D00D9B7D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		423BDBC121BD304D00D9B7D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,6 +51,15 @@
 		423BDBD221BD3FD500D9B7D4 /* Organisations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organisations.swift; sourceTree = "<group>"; };
 		423BDBD421BD527C00D9B7D4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		423BDBD621BD56BD00D9B7D4 /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
+		4294FA9C21F23801002738C0 /* ChecklistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTableViewController.swift; sourceTree = "<group>"; };
+		4294FA9E21F23B71002738C0 /* Checks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checks.swift; sourceTree = "<group>"; };
+		4294FAC221F4E4C9002738C0 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		4294FAC421F4E9B0002738C0 /* StatisticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewCell.swift; sourceTree = "<group>"; };
+		4294FAC621F4F775002738C0 /* OrgStatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgStatisticViewController.swift; sourceTree = "<group>"; };
+		4294FACC21F66BC1002738C0 /* ClimeAidStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimeAidStatsViewController.swift; sourceTree = "<group>"; };
+		4294FACE21F66CA0002738C0 /* StatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCollectionViewCell.swift; sourceTree = "<group>"; };
+		DD143B517DDC12ADC1921E00 /* Pods_prototype1scrollTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_prototype1scrollTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1F3A6772ED767A40527685A /* Pods-prototype1scrollTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prototype1scrollTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-prototype1scrollTableView/Pods-prototype1scrollTableView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +67,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D31FBABB95F00177AB98D81E /* Pods_prototype1scrollTableView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4218CCD3221998AB0094EA8C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4218CCD422199A5C0094EA8C /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		423BDBB021BD304D00D9B7D4 = {
 			isa = PBXGroup;
 			children = (
 				423BDBBB21BD304D00D9B7D4 /* prototype1scrollTableView */,
 				423BDBBA21BD304D00D9B7D4 /* Products */,
+				C62C25CE07889A242163D065 /* Pods */,
+				760D8052C793C4C0E5D3EEEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,18 +103,48 @@
 		423BDBBB21BD304D00D9B7D4 /* prototype1scrollTableView */ = {
 			isa = PBXGroup;
 			children = (
+				4218CCD3221998AB0094EA8C /* Services */,
 				423BDBBC21BD304D00D9B7D4 /* AppDelegate.swift */,
 				423BDBD621BD56BD00D9B7D4 /* AdViewController.swift */,
 				423BDBC021BD304D00D9B7D4 /* Main.storyboard */,
-				423BDBD421BD527C00D9B7D4 /* DetailViewController.swift */,
+				4218CCD62219C92B0094EA8C /* profilViewController.swift */,
+				4218CCD122197FE70094EA8C /* LoginViewController.swift */,
+				4218CCCF22197FB30094EA8C /* RegistViewController.swift */,
+				4218CCCD22197F550094EA8C /* HomeViewController.swift */,
+				4294FACC21F66BC1002738C0 /* ClimeAidStatsViewController.swift */,
+				422BE57E22230A1400CFE690 /* GoogleService-Info.plist */,
+				4294FACE21F66CA0002738C0 /* StatCollectionViewCell.swift */,
+				4294FAC621F4F775002738C0 /* OrgStatisticViewController.swift */,
+				4294FAC221F4E4C9002738C0 /* StatisticsViewController.swift */,
+				4294FAC421F4E9B0002738C0 /* StatisticsTableViewCell.swift */,
 				423BDBD221BD3FD500D9B7D4 /* Organisations.swift */,
 				423BDBCE21BD397100D9B7D4 /* MainViewController.swift */,
 				423BDBD021BD3E8D00D9B7D4 /* OrganisationTableViewCell.swift */,
+				423BDBD421BD527C00D9B7D4 /* DetailViewController.swift */,
+				4294FA9C21F23801002738C0 /* ChecklistTableViewController.swift */,
+				4294FA9E21F23B71002738C0 /* Checks.swift */,
 				423BDBC321BD305000D9B7D4 /* Assets.xcassets */,
 				423BDBC521BD305000D9B7D4 /* LaunchScreen.storyboard */,
 				423BDBC821BD305000D9B7D4 /* Info.plist */,
 			);
 			path = prototype1scrollTableView;
+			sourceTree = "<group>";
+		};
+		760D8052C793C4C0E5D3EEEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD143B517DDC12ADC1921E00 /* Pods_prototype1scrollTableView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C62C25CE07889A242163D065 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FCB775281BC8B3B6ED5EF04 /* Pods-prototype1scrollTableView.debug.xcconfig */,
+				E1F3A6772ED767A40527685A /* Pods-prototype1scrollTableView.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 423BDBCB21BD305000D9B7D4 /* Build configuration list for PBXNativeTarget "prototype1scrollTableView" */;
 			buildPhases = (
+				DD4E139AB1DD6E07EF1DA882 /* [CP] Check Pods Manifest.lock */,
 				423BDBB521BD304D00D9B7D4 /* Sources */,
 				423BDBB621BD304D00D9B7D4 /* Frameworks */,
 				423BDBB721BD304D00D9B7D4 /* Resources */,
+				4F8AE19E31F320C3ECA31848 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				423BDBC721BD305000D9B7D4 /* LaunchScreen.storyboard in Resources */,
+				422BE57F22230A1400CFE690 /* GoogleService-Info.plist in Resources */,
 				423BDBC421BD305000D9B7D4 /* Assets.xcassets in Resources */,
 				423BDBC221BD304D00D9B7D4 /* Main.storyboard in Resources */,
 			);
@@ -142,15 +216,92 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4F8AE19E31F320C3ECA31848 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-prototype1scrollTableView/Pods-prototype1scrollTableView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-prototype1scrollTableView/Pods-prototype1scrollTableView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD4E139AB1DD6E07EF1DA882 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-prototype1scrollTableView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		423BDBB521BD304D00D9B7D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4294FAC521F4E9B0002738C0 /* StatisticsTableViewCell.swift in Sources */,
+				4294FA9F21F23B71002738C0 /* Checks.swift in Sources */,
 				423BDBCF21BD397100D9B7D4 /* MainViewController.swift in Sources */,
 				423BDBD721BD56BD00D9B7D4 /* AdViewController.swift in Sources */,
+				4294FACF21F66CA0002738C0 /* StatCollectionViewCell.swift in Sources */,
+				4218CCD022197FB30094EA8C /* RegistViewController.swift in Sources */,
+				4218CCCE22197F550094EA8C /* HomeViewController.swift in Sources */,
 				423BDBBD21BD304D00D9B7D4 /* AppDelegate.swift in Sources */,
+				4294FAC721F4F775002738C0 /* OrgStatisticViewController.swift in Sources */,
+				4294FACD21F66BC1002738C0 /* ClimeAidStatsViewController.swift in Sources */,
+				4294FA9D21F23801002738C0 /* ChecklistTableViewController.swift in Sources */,
 				423BDBD521BD527C00D9B7D4 /* DetailViewController.swift in Sources */,
+				4218CCD222197FE70094EA8C /* LoginViewController.swift in Sources */,
+				4294FAC321F4E4C9002738C0 /* StatisticsViewController.swift in Sources */,
+				4218CCD72219C92B0094EA8C /* profilViewController.swift in Sources */,
+				4218CCD522199A5C0094EA8C /* AuthService.swift in Sources */,
 				423BDBD321BD3FD500D9B7D4 /* Organisations.swift in Sources */,
 				423BDBD121BD3E8D00D9B7D4 /* OrganisationTableViewCell.swift in Sources */,
 			);
@@ -296,6 +447,7 @@
 		};
 		423BDBCC21BD305000D9B7D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FCB775281BC8B3B6ED5EF04 /* Pods-prototype1scrollTableView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -313,6 +465,7 @@
 		};
 		423BDBCD21BD305000D9B7D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1F3A6772ED767A40527685A /* Pods-prototype1scrollTableView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

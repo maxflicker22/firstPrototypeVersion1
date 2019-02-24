@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firestore
 
 class MainViewController: UIViewController {
     
@@ -14,15 +15,37 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var organisationForSegue: Organisations?
+    var db: Firestore!
+    var orgArray = [Organisations]()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        db = Firestore.firestore()
+        loadData()
+        
         
         
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    func loadData() {
+        db.collection("organisations").getDocuments() {
+            querySnapshot, error in
+            if let error = error {
+                print("\(error.localizedDescription)")
+            }else {
+                self.orgArray = querySnapshot!.documents.compactMap({Organisations(dictionary: $0.data())})
+                DispatchQueue.main.async { //UI update
+                
+                    self.tableView.reloadData()
+                    
+                }
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
@@ -63,12 +86,13 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return orgArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? OrganisationTableViewCell{
-            cell.configure(for: Organisations.exampleOrganisations[indexPath.section], delegate: self as OrganisationsDelegate) //, delegate: self as OrganisationsDelegate
+          
+            cell.configure(for: orgArray[indexPath.row], delegate: self as OrganisationsDelegate) //, delegate: self as OrganisationsDelegate
             return cell
         }
         
@@ -76,10 +100,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
 
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return Organisations.exampleOrganisations.count
-    }
+//
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return orgArray.count
+//    }
     
 }
 extension MainViewController: OrganisationsDelegate{
