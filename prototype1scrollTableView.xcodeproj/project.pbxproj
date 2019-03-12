@@ -29,6 +29,7 @@
 		4294FAC721F4F775002738C0 /* OrgStatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294FAC621F4F775002738C0 /* OrgStatisticViewController.swift */; };
 		4294FACD21F66BC1002738C0 /* ClimeAidStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294FACC21F66BC1002738C0 /* ClimeAidStatsViewController.swift */; };
 		4294FACF21F66CA0002738C0 /* StatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294FACE21F66CA0002738C0 /* StatCollectionViewCell.swift */; };
+		42F47BD9223822FE0069FC48 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F47BD8223822FE0069FC48 /* User.swift */; };
 		D31FBABB95F00177AB98D81E /* Pods_prototype1scrollTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD143B517DDC12ADC1921E00 /* Pods_prototype1scrollTableView.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		4294FAC621F4F775002738C0 /* OrgStatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgStatisticViewController.swift; sourceTree = "<group>"; };
 		4294FACC21F66BC1002738C0 /* ClimeAidStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimeAidStatsViewController.swift; sourceTree = "<group>"; };
 		4294FACE21F66CA0002738C0 /* StatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCollectionViewCell.swift; sourceTree = "<group>"; };
+		42F47BD8223822FE0069FC48 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DD143B517DDC12ADC1921E00 /* Pods_prototype1scrollTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_prototype1scrollTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F3A6772ED767A40527685A /* Pods-prototype1scrollTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prototype1scrollTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-prototype1scrollTableView/Pods-prototype1scrollTableView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 				4294FAC221F4E4C9002738C0 /* StatisticsViewController.swift */,
 				4294FAC421F4E9B0002738C0 /* StatisticsTableViewCell.swift */,
 				423BDBD221BD3FD500D9B7D4 /* Organisations.swift */,
+				42F47BD8223822FE0069FC48 /* User.swift */,
 				423BDBCE21BD397100D9B7D4 /* MainViewController.swift */,
 				423BDBD021BD3E8D00D9B7D4 /* OrganisationTableViewCell.swift */,
 				423BDBD421BD527C00D9B7D4 /* DetailViewController.swift */,
@@ -304,6 +307,7 @@
 				4218CCD522199A5C0094EA8C /* AuthService.swift in Sources */,
 				423BDBD321BD3FD500D9B7D4 /* Organisations.swift in Sources */,
 				423BDBD121BD3E8D00D9B7D4 /* OrganisationTableViewCell.swift in Sources */,
+				42F47BD9223822FE0069FC48 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

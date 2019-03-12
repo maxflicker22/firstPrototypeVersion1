@@ -41,6 +41,8 @@ class AuthService {
         if error != nil {
             self.handleFirebaseError(error: error! as NSError, onComplete: onComplete)
         } else {
+            
+            
             Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 
                 if error != nil{
@@ -73,6 +75,10 @@ class AuthService {
         })
     }
     
+    
+    func createUserDocument(){
+        
+    }
     
     
     func handleFirebaseError(error: NSError, onComplete: Completion?) {

@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Firestore
 
 
 class AdViewController: UIViewController, GADRewardBasedVideoAdDelegate{
@@ -17,6 +18,12 @@ class AdViewController: UIViewController, GADRewardBasedVideoAdDelegate{
     @IBOutlet weak var adTextLabel: UILabel!
     var adViewController: AdViewController?
     
+    var org: Organisations?
+     var db: Firestore!
+    
+    var adCounter:Int = 0
+    
+    var newOrg: Organisations?
     
     
     
@@ -24,7 +31,53 @@ class AdViewController: UIViewController, GADRewardBasedVideoAdDelegate{
     fileprivate var rewardBasedAd: GADRewardBasedVideoAd?
     var lableText: String = "Please Wait"
     
+    
+    func updateData(){
+        
+        db = Firestore.firestore()
+        if let organisation = org {
+            let DocRef = db.collection("organisations").document(organisation.name)
+                DocRef.getDocument { (document, error) in
+                if let error = error {
+                  print(error.localizedDescription)
+                }else {
 
+                    self.newOrg = Organisations(dictionary: (document!.data()))
+                    if let gesamtZahl = self.newOrg?.gesamtZahl{
+                        self.newOrg?.gesamtZahl = gesamtZahl + self.adCounter
+                        
+                        DocRef.setData(self.newOrg!.dictionary)
+                        
+                        print("updated")
+                        
+                
+                }
+            }
+        }
+        
+       
+    }
+        
+    }
+    
+
+    @IBAction func closeSwipe(_ sender: Any) {
+        print("close")
+        updateData()
+        
+        _ = Timer.scheduledTimer(timeInterval: 0.55, target: self, selector: #selector(timerAction), userInfo: nil, repeats: false)
+//        self.navigationController?.popViewController(animated: true)
+  
+            
+       
+        
+       
+        
+
+    }
+    @objc func timerAction() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     
     
     @IBAction func startAdButton(_ sender: Any) {
@@ -34,7 +87,7 @@ class AdViewController: UIViewController, GADRewardBasedVideoAdDelegate{
             creatAndLoadVideoAd()
         }
     }
-    var org: Organisations?
+   
     
     func creatAndLoadVideoAd() {
         rewardBasedAd = GADRewardBasedVideoAd.sharedInstance()
@@ -46,18 +99,25 @@ class AdViewController: UIViewController, GADRewardBasedVideoAdDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        adTextLabel.text = lableText
+        
         if let organisation = org{ //sicher unwrappen
             print("asf")
             print("view did Load!")
             
             print(organisation.name)
-            adTextLabel.text = lableText
+           
         }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         creatAndLoadVideoAd()
           print("view did appear!")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("disapear")
     }
     
     func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didFailToLoadWithError error: Error) {
@@ -90,6 +150,9 @@ class AdViewController: UIViewController, GADRewardBasedVideoAdDelegate{
          print("Du erhältst currency:  \(reward.type), amount: \(reward.amount)")
 //        lableText = "Please Wait"
         adTextLabel.text = " +\(reward.amount)"
+        print(adCounter)
+        adCounter = adCounter + 1
+        print(adCounter)
         creatAndLoadVideoAd()
     }
 }

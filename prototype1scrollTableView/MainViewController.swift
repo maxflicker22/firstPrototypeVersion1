@@ -19,18 +19,27 @@ class MainViewController: UIViewController {
     var orgArray = [Organisations]()
 
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        db = Firestore.firestore()
-        loadData()
-        
+//        tableView.dataSource = self
+//        db = Firestore.firestore()
+//        loadData()
+                
         
         
 
         // Do any additional setup after loading the view.
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.dataSource = self
+        db = Firestore.firestore()
+        loadData()
+        print("MainVC appears")
+//        self.tableView.reloadData()
+    }
     
     func loadData() {
         db.collection("organisations").getDocuments() {
@@ -42,7 +51,8 @@ class MainViewController: UIViewController {
                 DispatchQueue.main.async { //UI update
                 
                     self.tableView.reloadData()
-                    
+                    print("loaded data")
+                    //aktualisiert erst beim 2. mal "loaded data"
                 }
             }
         }
@@ -52,6 +62,7 @@ class MainViewController: UIViewController {
         if segue.identifier == "DetailSegue"{
             
             if let destinationVC = segue.destination as? DetailViewController {
+                
                     destinationVC.organisations = organisationForSegue
                     
                 }
@@ -93,6 +104,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
         if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? OrganisationTableViewCell{
           
             cell.configure(for: orgArray[indexPath.row], delegate: self as OrganisationsDelegate) //, delegate: self as OrganisationsDelegate
+            organisationForSegue = orgArray[indexPath.row]
+       
             return cell
         }
         

@@ -374,6 +374,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="QtT-cm-4DR" firstAttribute="bottom" secondItem="pRZ-6o-Ghs" secondAttribute="bottom" constant="240" id="Huw-cG-x2Y"/>
                             <constraint firstItem="pRZ-6o-Ghs" firstAttribute="top" secondItem="QtT-cm-4DR" secondAttribute="top" constant="240" id="J8F-4b-eLz"/>
@@ -385,6 +386,9 @@
                             <constraint firstItem="eZ6-i7-oXM" firstAttribute="top" secondItem="QtT-cm-4DR" secondAttribute="top" id="y0c-ws-XbO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QtT-cm-4DR"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="mR4-D3-omc" appends="YES" id="roc-7b-nBf"/>
+                        </connections>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
@@ -392,8 +396,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0n-uj-saD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="mR4-D3-omc">
+                    <connections>
+                        <action selector="closeSwipe:" destination="Gu4-dt-ZSv" id="nAv-Ae-rTA"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3382" y="653"/>
+            <point key="canvasLocation" x="4434" y="627"/>
         </scene>
         <!--Statistics View Controller-->
         <scene sceneID="AnF-mc-vf3">
