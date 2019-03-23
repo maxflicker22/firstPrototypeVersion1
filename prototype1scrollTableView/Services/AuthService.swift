@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseAuth
+import Firestore
 
 
 typealias Completion = (_ errMsg: String?, _ data: AnyObject?) -> Void
@@ -50,8 +51,10 @@ class AuthService {
                     self.handleFirebaseError(error: error! as NSError, onComplete: onComplete)
                 } else {
                     //Successfully logged in
+                    
                     onComplete?(nil, user)
                     print("angemeldet")
+                    self.createUserDocument(email: email, pw: password)
                     
                 }
             })
@@ -76,7 +79,25 @@ class AuthService {
     }
     
     
-    func createUserDocument(){
+    func createUserDocument(email:String,pw:String){
+        var db: Firestore!
+        db = Firestore.firestore()
+        let userid = Auth.auth().currentUser?.uid
+        let punkte: Int = 0
+        let orgArr: [String] = []
+//        var user: User
+        var id: String = ""
+        if let thecurrentid = userid{
+            
+            id = thecurrentid
+            
+            }
+       let user = User(userId: id, email: email, pw: pw, punkte: punkte , orgArr: orgArr )
+        
+        let DocRef = db.collection("users").document(id)
+        DocRef.setData(user.userToDictonary())
+//        let DocRef = db.collection("users").addDocument(data: user.userToDictonary())
+        
         
     }
     

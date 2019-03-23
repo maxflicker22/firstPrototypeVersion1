@@ -27,23 +27,23 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
         tableView.dataSource = self
         tableView.delegate = self
         db = Firestore.firestore()
-        loadData()
+        loadOrgArray()
         
     }
     
-    func loadData() {
-        db.collection("organisations").getDocuments() {
-            querySnapshot, error in
-            if let error = error {
-                print("\(error.localizedDescription)")
-            }else {
-                self.orgArray = querySnapshot!.documents.compactMap({Organisations(dictionary: $0.data())})
-                DispatchQueue.main.async { //UI update
-                    self.tableView.reloadData()
-                }
-            }
-        }
-    }
+//    func loadData() {
+//        db.collection("organisations").getDocuments() {
+//            querySnapshot, error in
+//            if let error = error {
+//                print("\(error.localizedDescription)")
+//            }else {
+//                self.orgArray = querySnapshot!.documents.compactMap({Organisations(dictionary: $0.data())})
+//                DispatchQueue.main.async { //UI update
+//                    self.tableView.reloadData()
+//                }
+//            }
+//        }
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "StatCellSegue" {
@@ -52,8 +52,8 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
             }
         }
         if segue.identifier == "CAStatsSegue" {
-            if let destinationViewController = segue.destination as? OrgStatisticViewController  {
-                destinationViewController.organisation = organisation
+            if let destinationViewController = segue.destination as? ClimeAidStatsVC  {
+                destinationViewController.orgArray = orgArray
             }
         }
     }
@@ -83,5 +83,24 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
         performSegue(withIdentifier: "CAStatsSegue", sender: self)
     }
     
+    
+}
+
+
+extension StatisticsViewController: loadDataOrgArray{
+    func loadOrgArray(){
+        db.collection("organisations").getDocuments() {
+            querySnapshot, error in
+            if let error = error {
+                print("\(error.localizedDescription)")
+            }else {
+                self.orgArray = querySnapshot!.documents.compactMap({Organisations(dictionary: $0.data())})
+                DispatchQueue.main.async { //UI update
+                self.tableView.reloadData()
+                }
+            }
+        }
+       
+    }
     
 }

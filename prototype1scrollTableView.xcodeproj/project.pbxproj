@@ -12,6 +12,7 @@
 		4218CCD222197FE70094EA8C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4218CCD122197FE70094EA8C /* LoginViewController.swift */; };
 		4218CCD522199A5C0094EA8C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4218CCD422199A5C0094EA8C /* AuthService.swift */; };
 		4218CCD72219C92B0094EA8C /* profilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4218CCD62219C92B0094EA8C /* profilViewController.swift */; };
+		422AA16A2242BB7A00061F39 /* FirestoreFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422AA1692242BB7A00061F39 /* FirestoreFunc.swift */; };
 		422BE57F22230A1400CFE690 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 422BE57E22230A1400CFE690 /* GoogleService-Info.plist */; };
 		423BDBBD21BD304D00D9B7D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423BDBBC21BD304D00D9B7D4 /* AppDelegate.swift */; };
 		423BDBC221BD304D00D9B7D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423BDBC021BD304D00D9B7D4 /* Main.storyboard */; };
@@ -27,19 +28,20 @@
 		4294FAC321F4E4C9002738C0 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294FAC221F4E4C9002738C0 /* StatisticsViewController.swift */; };
 		4294FAC521F4E9B0002738C0 /* StatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294FAC421F4E9B0002738C0 /* StatisticsTableViewCell.swift */; };
 		4294FAC721F4F775002738C0 /* OrgStatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294FAC621F4F775002738C0 /* OrgStatisticViewController.swift */; };
-		4294FACD21F66BC1002738C0 /* ClimeAidStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294FACC21F66BC1002738C0 /* ClimeAidStatsViewController.swift */; };
+		4294FACD21F66BC1002738C0 /* ClimeAidStatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294FACC21F66BC1002738C0 /* ClimeAidStatsVC.swift */; };
 		4294FACF21F66CA0002738C0 /* StatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294FACE21F66CA0002738C0 /* StatCollectionViewCell.swift */; };
 		42F47BD9223822FE0069FC48 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F47BD8223822FE0069FC48 /* User.swift */; };
-		D31FBABB95F00177AB98D81E /* Pods_prototype1scrollTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD143B517DDC12ADC1921E00 /* Pods_prototype1scrollTableView.framework */; };
+		961A545AD6E8ECD7CC45FC4F /* Pods_prototype1scrollTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC198344945C3A22FD833DD /* Pods_prototype1scrollTableView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2FCB775281BC8B3B6ED5EF04 /* Pods-prototype1scrollTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prototype1scrollTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-prototype1scrollTableView/Pods-prototype1scrollTableView.debug.xcconfig"; sourceTree = "<group>"; };
+		0FBFA2E7A05104A183FB8C8C /* Pods-prototype1scrollTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prototype1scrollTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-prototype1scrollTableView/Pods-prototype1scrollTableView.debug.xcconfig"; sourceTree = "<group>"; };
 		4218CCCD22197F550094EA8C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4218CCCF22197FB30094EA8C /* RegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistViewController.swift; sourceTree = "<group>"; };
 		4218CCD122197FE70094EA8C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4218CCD422199A5C0094EA8C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		4218CCD62219C92B0094EA8C /* profilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profilViewController.swift; sourceTree = "<group>"; };
+		422AA1692242BB7A00061F39 /* FirestoreFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreFunc.swift; sourceTree = "<group>"; };
 		422BE57E22230A1400CFE690 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		423BDBB921BD304D00D9B7D4 /* prototype1scrollTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prototype1scrollTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		423BDBBC21BD304D00D9B7D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,11 +59,11 @@
 		4294FAC221F4E4C9002738C0 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		4294FAC421F4E9B0002738C0 /* StatisticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewCell.swift; sourceTree = "<group>"; };
 		4294FAC621F4F775002738C0 /* OrgStatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgStatisticViewController.swift; sourceTree = "<group>"; };
-		4294FACC21F66BC1002738C0 /* ClimeAidStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimeAidStatsViewController.swift; sourceTree = "<group>"; };
+		4294FACC21F66BC1002738C0 /* ClimeAidStatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimeAidStatsVC.swift; sourceTree = "<group>"; };
 		4294FACE21F66CA0002738C0 /* StatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCollectionViewCell.swift; sourceTree = "<group>"; };
 		42F47BD8223822FE0069FC48 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		DD143B517DDC12ADC1921E00 /* Pods_prototype1scrollTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_prototype1scrollTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1F3A6772ED767A40527685A /* Pods-prototype1scrollTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prototype1scrollTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-prototype1scrollTableView/Pods-prototype1scrollTableView.release.xcconfig"; sourceTree = "<group>"; };
+		7098759DA8A223963C2DA40A /* Pods-prototype1scrollTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prototype1scrollTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-prototype1scrollTableView/Pods-prototype1scrollTableView.release.xcconfig"; sourceTree = "<group>"; };
+		FFC198344945C3A22FD833DD /* Pods_prototype1scrollTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_prototype1scrollTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,17 +71,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D31FBABB95F00177AB98D81E /* Pods_prototype1scrollTableView.framework in Frameworks */,
+				961A545AD6E8ECD7CC45FC4F /* Pods_prototype1scrollTableView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CF68AEAD93F97D2E8C89A21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FBFA2E7A05104A183FB8C8C /* Pods-prototype1scrollTableView.debug.xcconfig */,
+				7098759DA8A223963C2DA40A /* Pods-prototype1scrollTableView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4218CCD3221998AB0094EA8C /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				4218CCD422199A5C0094EA8C /* AuthService.swift */,
+				422AA1692242BB7A00061F39 /* FirestoreFunc.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -89,8 +101,8 @@
 			children = (
 				423BDBBB21BD304D00D9B7D4 /* prototype1scrollTableView */,
 				423BDBBA21BD304D00D9B7D4 /* Products */,
-				C62C25CE07889A242163D065 /* Pods */,
-				760D8052C793C4C0E5D3EEEA /* Frameworks */,
+				1CF68AEAD93F97D2E8C89A21 /* Pods */,
+				829B72142EEC0693DA9A03FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,7 +125,7 @@
 				4218CCD122197FE70094EA8C /* LoginViewController.swift */,
 				4218CCCF22197FB30094EA8C /* RegistViewController.swift */,
 				4218CCCD22197F550094EA8C /* HomeViewController.swift */,
-				4294FACC21F66BC1002738C0 /* ClimeAidStatsViewController.swift */,
+				4294FACC21F66BC1002738C0 /* ClimeAidStatsVC.swift */,
 				422BE57E22230A1400CFE690 /* GoogleService-Info.plist */,
 				4294FACE21F66CA0002738C0 /* StatCollectionViewCell.swift */,
 				4294FAC621F4F775002738C0 /* OrgStatisticViewController.swift */,
@@ -133,21 +145,12 @@
 			path = prototype1scrollTableView;
 			sourceTree = "<group>";
 		};
-		760D8052C793C4C0E5D3EEEA /* Frameworks */ = {
+		829B72142EEC0693DA9A03FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DD143B517DDC12ADC1921E00 /* Pods_prototype1scrollTableView.framework */,
+				FFC198344945C3A22FD833DD /* Pods_prototype1scrollTableView.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C62C25CE07889A242163D065 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2FCB775281BC8B3B6ED5EF04 /* Pods-prototype1scrollTableView.debug.xcconfig */,
-				E1F3A6772ED767A40527685A /* Pods-prototype1scrollTableView.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,11 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 423BDBCB21BD305000D9B7D4 /* Build configuration list for PBXNativeTarget "prototype1scrollTableView" */;
 			buildPhases = (
-				DD4E139AB1DD6E07EF1DA882 /* [CP] Check Pods Manifest.lock */,
+				FE8733B45B4036A5B9361834 /* [CP] Check Pods Manifest.lock */,
 				423BDBB521BD304D00D9B7D4 /* Sources */,
 				423BDBB621BD304D00D9B7D4 /* Frameworks */,
 				423BDBB721BD304D00D9B7D4 /* Resources */,
-				4F8AE19E31F320C3ECA31848 /* [CP] Embed Pods Frameworks */,
+				08EFFC25F70AA97A99FA016B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,7 +223,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4F8AE19E31F320C3ECA31848 /* [CP] Embed Pods Frameworks */ = {
+		08EFFC25F70AA97A99FA016B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -260,7 +263,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-prototype1scrollTableView/Pods-prototype1scrollTableView-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DD4E139AB1DD6E07EF1DA882 /* [CP] Check Pods Manifest.lock */ = {
+		FE8733B45B4036A5B9361834 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -294,11 +297,12 @@
 				423BDBCF21BD397100D9B7D4 /* MainViewController.swift in Sources */,
 				423BDBD721BD56BD00D9B7D4 /* AdViewController.swift in Sources */,
 				4294FACF21F66CA0002738C0 /* StatCollectionViewCell.swift in Sources */,
+				422AA16A2242BB7A00061F39 /* FirestoreFunc.swift in Sources */,
 				4218CCD022197FB30094EA8C /* RegistViewController.swift in Sources */,
 				4218CCCE22197F550094EA8C /* HomeViewController.swift in Sources */,
 				423BDBBD21BD304D00D9B7D4 /* AppDelegate.swift in Sources */,
 				4294FAC721F4F775002738C0 /* OrgStatisticViewController.swift in Sources */,
-				4294FACD21F66BC1002738C0 /* ClimeAidStatsViewController.swift in Sources */,
+				4294FACD21F66BC1002738C0 /* ClimeAidStatsVC.swift in Sources */,
 				4294FA9D21F23801002738C0 /* ChecklistTableViewController.swift in Sources */,
 				423BDBD521BD527C00D9B7D4 /* DetailViewController.swift in Sources */,
 				4218CCD222197FE70094EA8C /* LoginViewController.swift in Sources */,
@@ -451,7 +455,7 @@
 		};
 		423BDBCC21BD305000D9B7D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FCB775281BC8B3B6ED5EF04 /* Pods-prototype1scrollTableView.debug.xcconfig */;
+			baseConfigurationReference = 0FBFA2E7A05104A183FB8C8C /* Pods-prototype1scrollTableView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -469,7 +473,7 @@
 		};
 		423BDBCD21BD305000D9B7D4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1F3A6772ED767A40527685A /* Pods-prototype1scrollTableView.release.xcconfig */;
+			baseConfigurationReference = 7098759DA8A223963C2DA40A /* Pods-prototype1scrollTableView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

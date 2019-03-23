@@ -7,8 +7,10 @@
 //
 
 import UIKit
-import Firebase
 import Firestore
+import Firebase
+
+
 
 
 class AdViewController: UIViewController, GADRewardBasedVideoAdDelegate{
@@ -19,7 +21,9 @@ class AdViewController: UIViewController, GADRewardBasedVideoAdDelegate{
     var adViewController: AdViewController?
     
     var org: Organisations?
+    var user: User?
      var db: Firestore!
+    
     
     var adCounter:Int = 0
     
@@ -41,7 +45,6 @@ class AdViewController: UIViewController, GADRewardBasedVideoAdDelegate{
                 if let error = error {
                   print(error.localizedDescription)
                 }else {
-
                     self.newOrg = Organisations(dictionary: (document!.data()))
                     if let gesamtZahl = self.newOrg?.gesamtZahl{
                         self.newOrg?.gesamtZahl = gesamtZahl + self.adCounter
@@ -59,11 +62,70 @@ class AdViewController: UIViewController, GADRewardBasedVideoAdDelegate{
     }
         
     }
+   
+    func updateUserData(){
+       
+        db = Firestore.firestore()
+        if let userid = Auth.auth().currentUser?.uid {
+        let DocRef = db.collection("users").document(userid)
+            DocRef.getDocument { (document, error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    if let data = document?.data()
+                    {
+                    self.user = User(dictionary: data)
+//                        let points = self.user?.punkte
+//                        print(self.user?.punkte)
+                        guard let points = self.user?.punkte else { print("waaaat"); return}
+//                        if let p = points {
+                        self.user?.punkte = points + self.adCounter
+                        guard var array = self.user?.orgArr else {return}
+                        guard let organisations = self.org else {return}
+                        
+                        //überprüfen ob wert in array doppelt ist
+                       let check = FirestoreFunc.instance.arrayValueDouble(array: array, string: organisations.name)
+                        
+                        if check == false {
+                            array.append(organisations.name)
+                        }
+                        self.user?.orgArr = array
+                        
+                        
+                        
+//                        print(self.user?.userToDictonary())
+                        DocRef.setData(self.user!.userToDictonary()){
+////                        guard let p = self.user?.punkte else { return}
+//                        DocRef.updateData([
+////                            "orgArr":  FieldValue.arrayUnion(["greater_virginia"]),
+//
+////                            SDK suchen!!!!!!
+//                            "punkte" : p
+//
+//                            ])
+                             err in
+                            if let err = err {
+                                print("Error updating document: \(err)")
+                            } else {
+                                print("Document successfully updated")
+                            }
+                        }
+//                            print("userdataupdated")
+//                        }
+                        
+                    }
+                }
+                
+        }
+    }
     
-
+    }
     @IBAction func closeSwipe(_ sender: Any) {
         print("close")
-        updateData()
+//        updateData()
+        updateOrgDataTransaction()
+        updateUserData()
+        
         
         _ = Timer.scheduledTimer(timeInterval: 0.55, target: self, selector: #selector(timerAction), userInfo: nil, repeats: false)
 //        self.navigationController?.popViewController(animated: true)
@@ -155,9 +217,68 @@ class AdViewController: UIViewController, GADRewardBasedVideoAdDelegate{
         print(adCounter)
         creatAndLoadVideoAd()
     }
+    
+    
+    
+    
+    func updateOrgDataTransaction() {
+        guard let organisations = org else { return}
+        db = Firestore.firestore()
+//        if let userid = Auth.auth().currentUser?.uid {
+            let DocRef = db.collection("organisations").document(organisations.name)
+         
+            db.runTransaction({ (transaction, errorPointer) -> Any? in
+                
+                let sfDocument: DocumentSnapshot
+                do {
+                    try sfDocument = transaction.getDocument(DocRef)
+                } catch let fetchError as NSError {
+                    errorPointer?.pointee = fetchError
+                    return nil
+                }
+                guard let oldPunkte = sfDocument.data()["gesamtZahl"] as? Int else{
+                    let error = NSError(
+                        domain: "AppErrorDomain",
+                        code: -1,
+                        userInfo: [
+                            NSLocalizedDescriptionKey: "Unable to retrieve population from snapshot \(sfDocument)"
+                        ]
+                    )
+                    errorPointer?.pointee = error
+                    return nil
+                }
+                let newPunkte = oldPunkte + self.adCounter
+                
+                transaction.updateData(["gesamtZahl": newPunkte]
+                    , forDocument: DocRef)
+                
+                return newPunkte
+            
+            })
+            { (object, error) in
+                if let error = error {
+                    print("Error updating population: \(error)")
+                } else {
+                    print("punkte org increased to \(object!)")
+                }
+            }
+            
+            
+            
+            
+        }
+        
+        
+//    }
 }
 
-    
+
+
+
+
+
+
+
         
         // Do any additional setup after loading the view.
 

@@ -497,12 +497,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAh-AI-6NU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2700" y="-251"/>
+            <point key="canvasLocation" x="2572" y="-251"/>
         </scene>
-        <!--Clime Aid Stats View Controller-->
+        <!--Clime Aid StatsVC-->
         <scene sceneID="DY5-BZ-6lw">
             <objects>
-                <viewController id="boq-up-ODK" customClass="ClimeAidStatsViewController" customModule="prototype1scrollTableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="boq-up-ODK" customClass="ClimeAidStatsVC" customModule="prototype1scrollTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dcl-kb-JPw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -557,35 +557,35 @@
                                     <outlet property="delegate" destination="boq-up-ODK" id="Lye-ma-a8N"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12234587234" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xlf-YP-KkK">
-                                <rect key="frame" x="16" y="155" width="343" height="53"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="Ijh-eC-9RW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" red="0.2947903174" green="0.015832402230000001" blue="0.28531175250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGs-XJ-tnz">
+                                <rect key="frame" x="16" y="168" width="343" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nta-uR-4Ji" firstAttribute="trailing" secondItem="GYI-CG-ywd" secondAttribute="trailing" constant="16" id="4jy-0x-HfE"/>
-                            <constraint firstItem="hQn-qG-4jH" firstAttribute="top" secondItem="Xlf-YP-KkK" secondAttribute="bottom" constant="31" id="FPq-ac-Tv0"/>
                             <constraint firstItem="hQn-qG-4jH" firstAttribute="trailing" secondItem="nta-uR-4Ji" secondAttribute="trailing" id="IB8-X2-Bca"/>
+                            <constraint firstItem="EGs-XJ-tnz" firstAttribute="trailing" secondItem="GYI-CG-ywd" secondAttribute="trailing" id="NKb-9h-aG3"/>
                             <constraint firstItem="GYI-CG-ywd" firstAttribute="top" secondItem="nta-uR-4Ji" secondAttribute="top" constant="30" id="Oeg-nc-zwL"/>
+                            <constraint firstItem="EGs-XJ-tnz" firstAttribute="leading" secondItem="GYI-CG-ywd" secondAttribute="leading" id="TKw-jr-vv7"/>
                             <constraint firstItem="hQn-qG-4jH" firstAttribute="bottom" secondItem="nta-uR-4Ji" secondAttribute="bottom" id="TLh-Rt-a2g"/>
-                            <constraint firstItem="Xlf-YP-KkK" firstAttribute="top" secondItem="GYI-CG-ywd" secondAttribute="bottom" constant="8" id="VvI-Xo-VAK"/>
-                            <constraint firstItem="Xlf-YP-KkK" firstAttribute="top" secondItem="GYI-CG-ywd" secondAttribute="bottom" constant="8" id="ZfJ-vr-JZ6"/>
+                            <constraint firstItem="EGs-XJ-tnz" firstAttribute="top" secondItem="GYI-CG-ywd" secondAttribute="bottom" constant="21" id="WDB-I6-VYa"/>
+                            <constraint firstItem="hQn-qG-4jH" firstAttribute="top" secondItem="EGs-XJ-tnz" secondAttribute="bottom" constant="15" id="bQx-6A-zne"/>
                             <constraint firstItem="GYI-CG-ywd" firstAttribute="top" secondItem="nta-uR-4Ji" secondAttribute="top" constant="30" id="cZ5-tb-7Kc"/>
                             <constraint firstItem="hQn-qG-4jH" firstAttribute="leading" secondItem="nta-uR-4Ji" secondAttribute="leading" id="dnc-Be-4h8"/>
-                            <constraint firstItem="Xlf-YP-KkK" firstAttribute="leading" secondItem="nta-uR-4Ji" secondAttribute="leading" constant="16" id="fkb-aQ-dzU"/>
                             <constraint firstItem="GYI-CG-ywd" firstAttribute="leading" secondItem="nta-uR-4Ji" secondAttribute="leading" constant="16" id="jce-FO-lA1"/>
                             <constraint firstItem="GYI-CG-ywd" firstAttribute="leading" secondItem="nta-uR-4Ji" secondAttribute="leading" constant="16" id="lgI-QM-o8q"/>
-                            <constraint firstItem="nta-uR-4Ji" firstAttribute="trailing" secondItem="Xlf-YP-KkK" secondAttribute="trailing" constant="16" id="n1R-Kq-bV7"/>
                             <constraint firstItem="nta-uR-4Ji" firstAttribute="trailing" secondItem="GYI-CG-ywd" secondAttribute="trailing" constant="16" id="qCG-da-ulJ"/>
+                            <constraint firstItem="hQn-qG-4jH" firstAttribute="top" secondItem="GYI-CG-ywd" secondAttribute="bottom" constant="92" id="vN4-6S-FcM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nta-uR-4Ji"/>
                     </view>
+                    <connections>
+                        <outlet property="gesamtPunkteLabel" destination="EGs-XJ-tnz" id="ZYo-Fu-TyF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GpZ-6R-7K9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
